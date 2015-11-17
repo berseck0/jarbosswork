@@ -1,0 +1,544 @@
+*
+{
+    font-size: 13px;
+}
+
+.list-sucursales
+{
+    left:0;
+    right:0;
+    position: absolute;
+    z-index: 99;
+    top:43px;
+    padding-left:0px !important;
+  
+}
+.list-sucursales ul
+{
+    background:#ffffff;
+    border:1px solid #d8d8d8;border-radius:6px;-webkit-border-radius:6px;
+    padding:8px;
+     padding-left:8px !important;
+    margin:0;
+    max-height:150px;
+    overflow-x:scroll;
+}
+.list-sucursales ul li
+{
+    background:#ffffff;
+border-top:1px solid #d8d8d8;background:white;font-size:16px;
+    transition-duradion:0.5s all ease;
+    -webkit-transition-duradion:0.5s all ease;
+    padding:8px 0;
+}
+.list-sucursales ul li:hover{
+background:#d8d8d8;
+}
+.icon-form-camera
+{
+    width: 29px;
+    height: 29px;
+    background-image: url('../img/camera.png');
+}
+
+.panel-mod
+{
+    background-color: #ffffff !important;
+}
+
+.dataUser
+{
+    margin:10px 0 !important;
+
+}
+.btncloseSesion
+{
+  margin: 15px 0 !important;
+}
+
+.fotoimg
+{
+    width: 47%;
+    height: 50%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.datosreporte ul
+{
+    list-style: none;
+    background-color: #FFF;
+    text-transform: capitalize;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left:10px;
+}
+
+.datosreporte ul li
+{
+    /*border-bottom: 1px solid gray;
+    width: 40%;*/
+}
+.rigth-btn
+{
+    float: right;
+    right: 1px;
+    top: 3px;
+    position: absolute;
+}
+/*....jerryStyle....*/
+.capaloader{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.7);
+    z-index:99999;
+    color:#ffffff;
+    text-align:center;
+}
+.jbTable{
+    display:table;
+    margin:0 auto;
+    height:100%;
+    width:200px;
+}
+.jbCell{
+    display:table-cell;
+    vertical-align:middle;
+}
+.jbLoadText{
+    width:auto;
+    height:200px;
+    font-size:40px;
+}
+.jbImg{
+    width:60% !important;
+    padding:0;
+    margin:0;
+}
+i.icon.icon-bars{
+    background-image:url("../img/Gear_32.png") !important;
+    background-repeat:no-repeat !important;
+    width:21px;
+    height:21px;
+}
+.color-azul{
+    opacity:1;
+    -webkit-opacity:1;
+    background:#2ba1c8 !important;
+    transition-duration:0.4s;
+    -webkit-transition-duration:0.4s;
+    border:1px solid black !important;
+}
+.color-azul:active{
+    opacity:0.4;
+    -webkit-opacity:0.4;
+}
+.jbListBlock{
+    margin-top:10px !important;
+    margin-bottom:10px !important;
+    padding:0 15px;
+}
+.jbListBlock ul:before, .jbListBlock ul:after{
+    display:none !important;
+}
+.jbItemInner{
+    border:1px solid #EAEAEA;
+    border-radius:5px;
+}
+.jbItemInner input:focus{
+    background:#EAEAEA;
+}
+.jbItemContent{
+    padding-left:0 !important;
+}
+.jbPage{
+    background:#ffffff;
+}
+.jbContentBlock{
+    margin:10px 0 !important;
+}
+.jbPoint{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    padding-right:5px;
+    width:100%;
+}
+.jbSelect{
+    height:27px !important;
+    margin-left: 5px !important;
+    text-transform: capitalize;
+    word-wrap:break-word;
+    height: auto !important;
+}
+.jbSelect option
+{
+    word-wrap:break-word;
+}
+#op_report_sec ul li
+{
+    height: auto !important;
+}
+.jbContentBlock{
+    position:absolute;
+    top:0 !important;
+    right:10px !important;
+    bottom:0 !important;
+    width:96px !important;
+    margin:0 !important;
+}
+.jbBtnBlock{
+    height:auto !important;
+    float:right;
+    width:auto !important;
+    
+}
+.jbBtnBlock input{
+    height:auto !important;
+    padding: 8px 0 !important;
+    width:47px !important;
+}
+.list-block textarea{
+    margin-left:5px !important;
+}
+.jbSpanPen{
+    text-align: right;
+    width: 70px;
+    min-width: 70px;
+}
+.jbCapPhoto{
+    display: inline-block;
+    width: 48% !important;
+    margin-left: 10px !important;
+    text-transform: capitalize;
+    white-space: pre-wrap !important;
+
+}
+.jbIconCam{
+    position:relative;
+    top: 0px;
+}
+.jbPhotoEdit{
+      top: 1px;
+  width: 48%;
+  position: relative;
+  float: right;
+  vertical-align: top;
+  display: inline-block;
+}
+#grup_select, #nom_sucursal{padding-left:14px !important;}
+
+.jbNavbarWhite{
+background:white !important;
+position:fixed;
+
+}
+.jbNavbarWhite:after{
+    display:none !important;
+}
+
+
+.headerAbout
+{
+    margin:17px 0 !important;
+    padding: 0px !important;
+}
+.headerAbout img
+{
+    width: 20%;
+  height: 20%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.headerAbout span
+{
+    top: 30px;
+    color: rgb(47, 191, 239);
+    font-size: 15px;
+    font-weight: 400;
+    overflow: hidden;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+.jbAbout
+{
+    bottom: 10px;
+    position: absolute;
+    left: 10px;
+}
+.bodyAbout
+{
+    border-top: 2px solid rgb(13, 151, 223);
+    width: 100%;
+}
+.bodyAbout p
+{
+      margin: 0px !important;
+}
+#firmaGenerate canvas
+{
+      border: 1px solid gray;
+  border-radius: 10px;
+  padding: 16px 1px 1px 1px;
+}
+.jb_fotosGaleria
+{position:relative;
+    overflow: hidden;
+    height: auto;
+    margin-top: 10px;
+}
+.jb_fotosGaleria img 
+{
+    border-radius: 10px;
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+    width: 100%;
+}
+.jb_fotosGaleri
+{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
+}
+.jb_fotosGaleri img
+{
+    border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.jb_divfotogaleria
+{
+    position:relative;
+    width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+.jb_suprfoto:before,.jb_fotosGaleri span:before
+{
+      content: "Eliminar Foto";
+}
+
+.jb_suprfoto,.jb_fotosGaleri span
+{
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.35);
+    top: 0px;
+    height: 30px;
+}
+
+.jbcontentFoto{position:relative}
+
+#listVistaReporEdit ul li
+{
+    list-style: none;
+}
+
+.barraMapTop
+{
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.backMapReport,.optMapfunc
+{
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+
+.optMapfunc
+{
+  float: right;
+}
+
+
+.widgetposition
+{
+   width: 40px;
+  height: 40px;
+  position: absolute;
+  float: right;
+  right: 20px;
+  top: 110px;
+  z-index: 99;
+}
+
+.btnsavegps
+{
+    border: 1px solid rgb(0, 110, 255);
+    border-radius: 4px;
+    padding: 3px;
+    color: rgb(0, 110, 255);
+}
+
+
+
+.perfilimagen
+{
+  width: 50%;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+.seccionReport
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    padding: 3px 0px;
+    text-align: center;
+    height: 40px;
+    border-right: 1px solid gray;
+}
+.seccionReport span
+{
+  position: relative;
+  top: 10px;
+}
+.contenSeccion
+{
+    border-bottom: 1px solid gray;
+    background-color: #fff;
+    height: 45px;
+}
+.repActivo
+{
+    border-bottom: 3px solid #1189FB;
+}
+
+.notaCheklist
+{
+    border-bottom: 1px solid gray;
+    padding: 10px 5px;
+}
+
+.jbInputText
+{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.39);
+    margin-left: 5px;
+    color:#fff;
+}
+
+.listEmpledosLayer
+{
+  position: absolute;
+  z-index: 99;
+   padding-left:0px !important;
+}
+.listEmpleados
+{
+    display: none;
+    background:#ffffff;
+    border:1px solid #d8d8d8;border-radius:6px;-webkit-border-radius:6px;
+    padding:8px;
+    padding-left:8px !important;
+    margin:0;
+    max-height:150px;
+    overflow-x:scroll;
+    z-index: 99;
+    position: absolute;
+    width: 95%;
+}
+.listEmpleados li
+{
+  background:#ffffff;
+border-top:1px solid #d8d8d8;background:white;font-size:16px;
+    transition-duradion:0.5s all ease;
+    -webkit-transition-duradion:0.5s all ease;
+    padding:8px 0;
+}
+.botonCroquisjb
+{
+    padding: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 10px;
+    background: #fff;
+}
+.AreaDeDibujo
+{
+    min-height: 100%;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.AreaDeDibujo fieldset {
+    background: #aaa;
+}
+.AreaDeDibujo fieldset {
+    position: relative;
+    border: 5px solid #aaa;
+    background: #aaa;
+    right: 0px;
+    bottom: 0px;
+}
+.AreaDeDibujo canvas {
+    outline: 2px solid #aaa;
+    width: 100%;
+    height:400px !important;
+    background: #fff;
+}
+#drawCroquis input[type=reset],  #drawCroquis input[type=button]{
+        font-size: larger;
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+}
+
+
+
+
+
+
+/*
+.list-sucursales
+{
+    left:0;
+    right:0;
+    position: absolute;
+    z-index: 99;
+    top:43px;
+    padding-left:0px !important;
+  
+}
+.list-sucursales ul
+{
+    background:#ffffff;
+    border:1px solid #d8d8d8;border-radius:6px;-webkit-border-radius:6px;
+    padding:8px;
+     padding-left:8px !important;
+    margin:0;
+    max-height:150px;
+    overflow-x:scroll;
+}
+.list-sucursales ul li
+{
+    background:#ffffff;
+border-top:1px solid #d8d8d8;background:white;font-size:16px;
+    transition-duradion:0.5s all ease;
+    -webkit-transition-duradion:0.5s all ease;
+    padding:8px 0;
+}*/

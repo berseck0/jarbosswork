@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"-->
+    <!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui target-densitydpi=device-dpi"-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Jarboss Work</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="assets/jquery.signaturepad.css" >
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal panel-mod PanelLeft">
+    <div class="content-block btncloseSesion" id="dataUser">
+          <img  id="imgProfile" alt="imagen de perfil" class="perfilimagen">
+        <div id="nombreUSer" class="content-block-title dataUser"></div>
+         <div id="empresaUSer" class="content-block-title dataUser"></div>
+    </div>
+      <div class="content-block btncloseSesion" >
+                  <div class="row" id="">
+                  <div class="col-100">
+                    <a id="SessionOff" class="button" >Cerrar Sesión</a>
+                  </div>
+                  </div>
+
+              </div>
+              <div class="jbAbout">
+                <div class="headerAbout content-block">
+                  <!--img src="img/iconabout.png" alt=""-->
+                  <span>Acerca de nosotros</span>
+                </div>
+                <div class="bodyAbout">
+                  <p>Versión de la aplicación: 1.1.12</p>
+                  <p>© 2012-2015 Jarboss S.A. de C.V.</p>
+                  <p>Todos los derechos reservados.</p>
+                </div>
+              </div>
+    </div>
+    <!-- fin del panel izquierdo-->
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding" id="jb_title">Jarboss Work</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- Navbar inner for Login page-->
+          <div data-page="form" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <div class="center sliding">Login</div>
+          </div>
+          <!-- navbar de reportes-->
+          <div data-page="reportes" class="navbar-inner cached">
+            <div class="left sliding" ><a href="#" class="back link" id="regresamainpage"><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <div class="center sliding">Mis Reportes</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- navbar de reportes-sec -->
+          <div data-page="reportes-sec" class="navbar-inner cached">
+            <div class="left sliding"><a href="#reportes" class="back link" id="reinReport"><i class="icon icon-back"></i><span>Reiniciar</span></a></div>
+            <a href="#reportes" id="reinReport2"></a>
+            <div class="center sliding" id="tit_report_sec">Mis Reportes</div>
+              <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+
+          <!-- navbar de reportes-sec -->
+          <div data-page="google-map" class="navbar-inner cached">
+            <div class="left sliding" ><a  id="linkbackMaps" class="back link" onclick="backreportesProceso(1);"><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <a href="#reportes-sec"></a>
+            <div class="center sliding">Mi Ubicación</div>
+              <div class="right btnsavegps"  id="CordMaps">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <label for="">Guardar Posición</label>
+            </div>
+          </div>
+
+          <!-- navbar de reportes-sec -->
+          <div data-page="option-repo" class="navbar-inner cached">
+            <div class="left sliding"><a  class="back link" id="opReport" onclick="backReport();"><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <div class="center sliding" id="tit_option_repo"></div>
+          </div>
+          <!-- navbar de reportes-sec -->
+          <div data-page="vistaRepor" class="navbar-inner cached">
+            <div class="left sliding"><a href="#reportes-sec" class="back link" id="regReport"><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <div class="center sliding" id="tit_vista_repo"></div>
+          </div>
+          <!-- navbar de reportes-sec -->
+          <div data-page="datosvistaRepor"  class="navbar-inner cached">
+            <div class="left sliding"><a href="#vistaRepor" class="back link" onclick="delbtnUpDate();"><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <!--div class="rigth-btn" ><a class="button" id="" onclick="actualizarReport();"><span>Actualizar</span></a></div-->
+            <div class="center sliding" id="tit_vista_repo"></div>
+          </div>
+          <!-- navbar de reportes-sec -->
+          <div data-page="publicaReport"  class="navbar-inner cached">
+            <div class="left sliding"><a href="#option-repo" onclick="backReport();" class="back link" ><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <div class="center sliding" id="tit_sinc"></div>
+          </div>
+          <div data-page="croquisReporte"  class="navbar-inner cached">
+            <div class="left sliding"><a href="#croquisReporte" class="back link" id="backToCroquis" ><i class="icon icon-back"></i><span>Regresar</span></a></div>
+            <div class="center sliding" id="tit_sinc"></div>
+          </div>
+      </div>
+        
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+
+
+
+          <!--  -->
+          <!-- Form Page-->
+          <div data-page="index" class="page">
+            <div class="page-content">
+            <div class="contenSeccion">
+              <div class="seccionReport" id="reporInert" onclick="reporInterSow();"><span>Checklist Internos</span></div>              
+              <div class="seccionReport" id="reporExt" onclick="reporExterSow();"><span>Checklist Externos</span></div>
+            </div>
+             <div class="content-block-title">Reportes</div>
+              
+             <!-- asasasasasasasasasas-->
+             <div class="content-block">
+                <div class="list-block" id="list_plantillas">
+                  <ul>
+                  <li class="notaCheklist">* Los checklist internos se comparten solamente entre tu empresa.</li>
+                  <li class="notaCheklist">* Los checklist externos se comparten con personal de tu empresa pero tambien pueden ser visibles con personal externo.</li>
+                  <li class="notaCheklist">Checklist internos/externos se basan en los grupos creads por la empresa.</li>
+                  </ul>
+                </div>
+             </div>
+          
+            
+            <!-- termina lista de plantillas-->
+            </div>
+          </div>
+
+          
+          <!-- pagina de plantillas-->
+          
+          <div data-page="reportes" class="page cached">
+            <div class="page-content">
+
+              <div class="content-block-title">Capture lo adecuado</div>
+             <!-- asasasasasasasasasas-->
+              <div class="content-block-inner" id="jb_list_plantillas"></div>
+            <!-- termine plantillas-->
+
+            </div>
+          </div>
+
+
+           <!-- pagina de proceso de captura-->
+          
+          <div data-page="reportes-sec" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="lista_reporte_sec">
+                  <div class="list-block" id="list_report_sec">
+                  <ul></ul>
+                  </div>
+
+              </div>
+            <!-- termine plantillas-->
+
+            </div>
+          </div>
+
+
+            <!-- popciones de reporte-->
+          
+          <div data-page="option-repo" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="option_reporte_sec">
+                  <div class="list-block" id="op_report_sec">
+                  <ul></ul>
+                  </div>
+
+              </div>
+              <div class="content-block" id="seccionprincipal">
+                  <div class="row" id="option_btn_img">
+                        <div class="col-50" >
+                            
+                            <div id="fimraGenerate" style="display:none;" ><canvas class="pad"></canvas> </div>
+                        </div>
+                        <div class="col-50">
+                            <a href="" class="button" id="btnEndReportes">Guardar y continuar</a>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-100">
+                          <div style="width:90%;display:none;" id="jb_fotos_galery" class="jb_fotosGaleria"></div>
+                          <div style="width:90%;margin-top: 10px;" id="jb_firma"></div>
+                        </div>
+                  </div>
+  
+              </div>
+            <!-- termine plantillas-->
+
+            </div>
+          </div>
+
+          <!-- pagina muestra el historial de captura-->
+          
+          <div data-page="vistaRepor" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="listReporteFinal">
+                  <div class="list-block" id="listReporteFinal_end">
+                  <ul></ul>
+                  </div>
+
+              </div>
+            <!-- tass-->
+            </div>
+          </div>
+  
+     <!-- pagina de visualisa los datos emitidos en un rpeorte-->
+          
+          <div data-page="datosvistaRepor" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="vistaReporEdit">
+                  <div id="datosSAveReporte" class="datosreporte"><ul></ul></div>
+                  <div class="list-block" id="listVistaReporEdit">
+                  <ul></ul>
+                  </div>
+
+              </div>
+              <div class="content-block" id="seccioneditin">
+                  <div class="row" id="option_btn_img">
+                      <div class="col-50" >
+                          
+                          
+                      </div>
+                      
+                  </div>
+
+                  <div class="row">
+                        <div class="col-100">
+                          <div style="width:90%;display:none;" id="jb_fotos_galery" class="jb_fotosGaleria" ></div>
+                          <div style="width:90%;" id="jb_firma_edit"></div>
+                        </div>
+                  </div>
+                  
+              </div>
+            <!-- tass-->
+            </div>
+          </div>
+
+          <!-- pagina de sincornizacion para los datos emitidos en un rpeorte-->
+          
+          <div data-page="publicaReport" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="">
+                  <div class="list-block" style="background-color:#fff;">
+                    
+                      <div class="item-content" style="padding-left:10px;background-color: rgb(239, 239, 244);">
+                        <!--div class="item-media"><i class="icon icon-form-comment"></i></div-->
+                        <div class="item-title label" style="font-size: 14px;width: 100%;background-color: rgb(239, 239, 244);"><b>Escribe tu Actividad</b></div>
+                      </div>
+                      <div class="item-inner">
+                          <div class="item-input" style="padding-left:6px;">
+                            <input type="text" placeholder="Escribe tu actividad" id="textActividad">
+                          </div>
+                      </div>
+                
+
+                  </div>
+                      <div class="col-100">
+                        <input type="submit" value="Publicar" class="button button-fill color-azul" onclick="zincActividades();">
+                      </div>
+              </div>
+            <!-- tass-->
+            </div>
+          </div>
+
+          <!-- pagina de mapa de gogole-->
+          
+          <div data-page="google-map" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="mapshow">
+                  <img class="widgetposition" src="img/gpsicon.jpg" id="bntGpsRenueva" onclick="nuevaPositiongps();">
+                  <div class="list-block" id="muestra_map"  style="width:100%;  height:400px;"></div>
+              </div>
+            <!-- termine plantillas-->
+
+            </div>
+          </div>
+
+          <!-- pagina de sincornizacion para los datos emitidos en un rpeorte-->
+          
+          <div data-page="croquisReporte" class="page cached">
+            <div class="page-content">
+          
+             <!-- asasasasasasasasasas-->
+              <div class="content-block" id="drawCroquis">
+                  <div class="list-block" style="background-color:#fff;">
+                    
+                      <form method="POST" action="#" class="AreaDeDibujo">
+                      <canvas id="drawCanvas"></canvas>
+                      <input type="hidden" name="outputDraw" class="outputDraw" id="drawCroquisSeguros">
+                    </form>
+
+                  </div>
+                      <div class="col-100">
+                        <input type="button" value="Guardar" id="saveCroquisId" class="button button-fill color-azul" >
+                        <input type="button" value="clear" class="clearButton button button-fill color-azul" onclick="limpiarCanvas()" />
+                      </div>
+              </div>
+            <!-- tass-->
+            </div>
+          </div>
+
+
+          <div style="display:none;" id="reporteiniciado"></div>
+          <feature name="Geolocation"><param name="ios-package" value="CDVLocation" /></feature>
+
+
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner" id="optionPublicar">
+              <!--a  id="btnGps" class="link" href="#google-map" onclick="getCurrentPosition()">Ubicación</a-->
+              <a  id="btnGps" class="link" onclick="saveCordenadas(1,0,0)">Ubicación</a>
+              <div id="menuAlterno">
+                  <div><a class="button" id="bntHistorial"  style="display:none;"><span>Historial</span></a></div>
+              </div>
+              <a href="#" class="link" id="btnPublicar" onclick="prePublicarActivida();">Publicar</a>
+              <a href="#publicaReport" id="ligaPublica" style="display:none;"></a>
+          </div>
+          <div id="tool_report"></div>
+        </div>
+        <div id="showAlert" class="jbShowAlert" style="display:none;"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/Camara.js"></script>
+    <script type="text/javascript" src="js/jquery.signaturepad.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&libraries=places&signed_in=false"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/qrScaner.js"></script>
+     <script type="text/javascript" src="js/geolocation.js"></script>
+    <script type="text/javascript" src="js/_funciones.js" ></script>
+ 
+  <script type="text/javascript" src="assets/json2.min.js"></script>
+   
+  </body>
+</html>

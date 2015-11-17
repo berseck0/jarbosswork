@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Login</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar jbNavbarWhite" style="display:none;">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding"></div>
+            
+          </div>
+        
+
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          
+          <!-- Form Page-->
+          <div data-page="index" class="page jbPage">
+            <div class="page-content">
+              <div class="content-block logo-inicio">
+                <p style="text-align:center;">
+                <img src="img/logo_Jbwork.png"></p>
+              </div>
+              
+
+              <div class="content-block-title"></div>
+              <div class="list-block  jbListBlock">
+                <ul>                  
+                  <li>
+                    <div class="item-content jbItemContent">
+                      <!--div class="item-media"><i class="icon icon-form-email"></i></div-->
+                      <div class="item-inner jbItemInner">
+                        <!--div class="item-title label">Correo</div-->
+                        <div class="item-input jbitemInput">
+                          <input type="email" id="jb_email" placeholder="Correo">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  </ul>
+                </div>
+              <div class="list-block jbListBlock">
+                  <ul>
+                  <li>
+                    <div class="item-content jbItemContent">
+                      <!--div class="item-media"><i class="icon icon-form-password"></i></div-->
+                      <div class="item-inner jbItemInner">
+                        <!--div class="item-title label">Contraseña</div -->
+                        <div class="item-input jbitemInput">
+                          <input type="password" id="jb_pass" placeholder="Contraseña">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                
+                </ul>
+              </div>
+              
+              <div class="content-block" style="margin-top:15px;">
+                <div class="row">
+                  <div class="col-100">
+                    <input type="submit" id="jb_login" value="Iniciar sesión" class="button button-big button-fill color-azul">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <!--script type="text/javascript" src="js/_funciones.js"></script-->
+   <script>
+            $(document).on('ready',function() {                    
+                  if (typeof localStorage['idusuario'] !== 'undefined') {
+                    //console.log(localStorage['idusuario']);
+                    window.location="login.html";
+                  }      
+              });     
+            </script>
+  </body>
+</html>

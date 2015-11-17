@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.jarboss.work" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Jarboss work</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <plugin name="cordova-plugin-file" spec="~3.0.0" />
+    <plugin name="cordova-plugin-geolocation" spec="https://github.com/apache/cordova-plugin-geolocation.git" />
+    <plugin name="cordova-plugin-device" spec="~1.0.1" />
+</widget>
